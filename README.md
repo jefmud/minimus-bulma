@@ -4,7 +4,7 @@ Bulma - an excellent lightweight framework
 
 https://github.com/jgthms/bulma
 
-Jinja2 - the best templating system for Minimus (and Flask, Djamgo, etc.)
+Jinja2 - the best templating system for Minimus (and Flask, Django, etc.)
 
 https://jinja.palletsprojects.com/en/3.0.x/
 
