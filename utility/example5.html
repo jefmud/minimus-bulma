@@ -1,0 +1,12 @@
+{% extends 'utility/base.html' %}
+{% from 'utility/macros.html' import field, radiobuttons %}
+
+{% block content %}
+<h2 class="title">{{ fields.title }}</h2>
+<form>
+    <input type="hidden" value="{{fields.csrf_token}}" name="csrf_token">
+    {{ field("mytitle", "Title", fields.mytitle, pre) }}
+    {{ radiobuttons("myradio", "Radio Buttons", radiobtns) }}
+    <input class="button" type="submit" value="Save">
+</form>
+{% endblock %}

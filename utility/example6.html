@@ -1,0 +1,14 @@
+{% extends 'utility/base.html' %}
+{% from 'utility/macros.html' import button, modal_ckeditor, modal_textfield, modal_upload, field %}
+
+{% block content %}
+<h2 class="title">{{ fields.title }}</h2>
+<form>
+    <input type="hidden" value="{{fields.csrf_token}}" name="csrf_token">
+    {{ modal_ckeditor("response_ck", "Response CKEditor", fields.myresponse_ck, button_label="Edit Rich Text") }}
+    <hr>
+    {{ modal_textfield("response_txt", "Response Text", fields.myresponse_txt, button_label="Edit Plain Text") }}
+    <hr>
+    {{ modal_upload("response_upload", "Response Upload", fields.myresponse_upload) }}
+</form>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'utility/base.html' %}
+{% from 'utility/macros.html' import button, field, textfield, ckeditor %}
+
+{% block content %}
+<h2 class="title">{{ fields.title }}</h2>
+<form>
+    <input type="hidden" value="{{fields.csrf_token}}" name="csrf_token">
+    {# placeholder is optional, first three arguments and name, label, value, and then optional #}
+    {# arguments of placeholder, size, type, modifier, and category #}
+    {{ field("username", "Username", fields.username, placeholder="Enter your username") }}
+    {{ field("password", "Password", fields.password, type="password") }}
+    {{ field("date", "Date", fields.date, type="date") }}
+    {{ field("start", "Start Time", fields.start, type="time")}}
+    <hr>
+    {{ field("contact", "Contact Phone", fields.contact, placeholder="Contact phone (optional)", type="tel") }}
+    {{ textfield("notes", "Notes", fields.notes, ) }}
+    <div class="buttons">
+    {{ button("save", "Save", type="submit", category="is-info") }}
+    {{ button("reset", "Reset", type="reset", category="is-default") }}
+    </div>
+</form>
+{% endblock %}

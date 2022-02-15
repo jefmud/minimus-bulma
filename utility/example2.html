@@ -1,0 +1,15 @@
+{% extends 'utility/base.html' %}
+{% from 'utility/macros.html' import button, field, ckeditor, checkbox %}
+
+{% block content %}
+<h2 class="title">{{ fields.title }}</h2>
+<form>
+    <input type="hidden" value="{{fields.csrf_token}}" name="csrf_token">
+    {{ field("mytitle", "Title", fields.mytitle, pre) }}
+    {{ field("mysubtitle", "Subtitle", fields.mysubtitle) }}
+    {{ field("author", "Author", fields.author) }}
+    {{ checkbox("is_published", "Published", fields.is_published) }}
+    {{ ckeditor("content", "Content", fields.content) }}
+    {{ button("save", "Save", category="is-danger") }}
+</form>
+{% endblock %}
