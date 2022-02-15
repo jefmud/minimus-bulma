@@ -3,6 +3,7 @@ Examples of Minimus and Bulma macros.
 Bulma - an excellent lightweight framework
 
 https://bulma.io/
+
 https://github.com/jgthms/bulma
 
 Jinja2 - the best templating system for Minimus (and Flask, Django, etc.)
