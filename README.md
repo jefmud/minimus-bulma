@@ -1,1 +1,1 @@
-Exanples of Minimus and Bulma macros.
+Examples of Minimus and Bulma macros.
